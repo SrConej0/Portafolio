@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .box {
+            width: 45%;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p>Este es el primer cuadro con un texto.</p>
+            <div class="button-container">
+                <button onclick="updateContent()">Actualizar Contenido</button>
+            </div>
+        </div>
+        <div class="box" id="content-box">
+            <p>Descripción inicial con muchos textos.</p>
+        </div>
+    </div>
+
+    <script>
+        function updateContent() {
+            fetch('Window/window01.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content-box').innerHTML = data;
+                })
+                .catch(error => console.error('Error al cargar el contenido:', error));
+        }
+    </script>
+</body>
+</html>
