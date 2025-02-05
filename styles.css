@@ -1,7 +1,7 @@
 :root {
     --sidebar-width: 80px;
-    --glass-bg: rgba(25, 25, 35, 0.288);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(25, 25, 35, 0.116);
+    --glass-border: rgba(255, 255, 255, 0.548);
     --primary-color: #8358ff;
     --secondary-color: #1a1b1f;
     --accent-color: #343539;
@@ -46,9 +46,11 @@ body {
     background: var(--glass-bg);
     backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.212);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.096);
 }
-
+.glass i{
+    font-size: 20px;
+}
 /* Vertical Navbar */
 .vertical-navbar {
     position: fixed;
@@ -197,6 +199,13 @@ body {
     opacity: 0.3;
     animation: float 15s infinite ease-in-out;
 }
+.hero-subtitle{
+font-family: 'Pacifico', cursive;
+}   
+.different{
+    background-color: rgba(28, 25, 35, 0.055);
+    border-radius: 20px;
+}
 
 @keyframes float {
     0%, 100% {
@@ -275,6 +284,13 @@ body {
     border-radius: 20px;
     font-size: 0.9rem;
 }
+.profile-section img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
